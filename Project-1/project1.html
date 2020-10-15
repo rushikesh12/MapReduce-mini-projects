@@ -1,0 +1,240 @@
+
+<h2>Description</h2>
+<p>
+<p>
+The purpose of this project is to develop a simple Map-Reduce program on Hadoop for graph processing.
+<p>
+This project must be done individually. No copying is permitted. 
+<b>Note: We will use a system for detecting software plagiarism, called
+<a href="http://theory.stanford.edu/~aiken/moss/" target="_top">Moss</a>,
+which is an automatic system for determining
+the similarity of programs.</b>  That is, your program will be
+compared with the programs of the other students in class as well as
+with the programs submitted in previous years. This program will find
+similarities even if you rename variables, move code, change code
+structure, etc.
+</p>
+<p>
+Note that, if you use a Search Engine to find similar programs on the
+web, we will find these programs too. So don't do it because you will
+get caught and you will get an F in the course (this is
+cheating). Don't look for code to use for your project on the web or
+from other students (current or past). Just do your project alone using the help
+given in this project description and from your instructor and GTA
+only.
+</p>
+<h2>Platform</h2>
+<p>
+You will develop your program on your laptop and then on <a href="comet.html">SDSC Comet</a>.
+Optionally, you may use IntelliJ IDEA or Eclipse to help you develop your program on your laptop,
+but you should test your programs on Comet before you submit them.
+</p>
+<h2>How to develop your project on your laptop</h2>
+<p>
+You can use your laptop to develop your program and then test it and run it on Comet.
+This step is optional but highly recommended because it will save you a lot of time.
+Note that testing and running your program on Comet is required.
+<p>
+If you have Mac OS or Linux, make sure you have Java and Maven installed.
+On Mac, you can install Maven using Homebrew <tt>brew install maven</tt>. 
+On Ubuntu Linux, use <tt>apt install maven</tt>.
+<p>
+On Windows 10, you need to install <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_top">Windows Subsystem for Linux (WSL 2)</a> and then Ubuntu 20.04 LTS.
+It's OK if you have WSL 1 or an older Ubuntu.
+Then, open a unix shell (terminal) and do: <tt>sudo apt update</tt>, <tt>sudo apt upgrade</tt>, and <tt>sudo apt install openjdk-8-jdk maven</tt>.
+<p>
+To install Hadoop and the project, cut&amp;paste and execute on the unix shell:
+<pre>
+cd
+wget https://archive.apache.org/dist/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
+tar xfz hadoop-2.6.5.tar.gz
+wget http://lambda.uta.edu/cse6331/project1.tgz
+tar xfz project1.tgz
+</pre>
+You should also set your JAVA_HOME to point to your java installation. For example, on Windows 10 do:
+<pre>
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+</pre>
+To test Map-Reduce, go to <tt>project1/examples/src/main/java</tt> and look at the two Map-Reduce examples <tt>Simple.java</tt>
+and <tt>Join.java</tt>.
+You can compile both Java files using:
+<pre>
+mvn install
+</pre>
+and you can run Simple in standalone mode using:
+<pre>
+~/hadoop-2.6.5/bin/hadoop jar target/*.jar Simple simple.txt output-simple
+</pre>
+The file <tt>output-simple/part-r-00000</tt> will contain the results.
+<p>
+To compile and run project1:
+<pre>
+cd project1
+mvn install
+rm -rf output
+~/hadoop-2.6.5/bin/hadoop jar target/*.jar Graph small-graph.txt output
+</pre>
+The file <tt>output/part-r-00000</tt> will contain the results which must be:
+<pre>
+2 2
+3 2
+4 1
+5 2
+7 1
+</pre>
+After your project works correctly on your laptop (it produces the same results as the solution), copy it to Comet:
+<pre>
+cd
+rm project1.tgz
+tar cfz project1.tgz project1
+scp project1.tgz xyz1234@comet.sdsc.edu:
+</pre>
+where <tt>xyz1234</tt> is your Comet username.
+</p>
+<h2>Setting up your Project on Comet</h2>
+<p>
+This step is required. If you'd like, you can develop this project completely on
+Comet. 
+Follow the directions on How to login to Comet at <a href="comet.html">comet.html</a>.
+Please email the GTA if you need further help.
+<p>
+Edit the file <tt>.bashrc</tt> (note: it starts with a dot) using a text editor,
+such as <tt>nano .bashrc</tt>, and add the following 2 lines at the end (cut-and-paste):
+<pre>
+export JAVA_HOME=/lib/jvm/java
+alias run='srun --pty -A uot143 --partition=shared --nodes=1 --ntasks-per-node=1 --mem=5G -t 00:05:00 --wait=0 --export=ALL'
+export project=/oasis/projects/nsf/uot143/fegaras
+</pre>
+logout and login again to apply the changes.
+If you have already developed project1 on your laptop, copy <tt>project1.tgz</tt> from your
+laptop to Comet. Otherwise, download project1 from the class web site:
+<pre>
+wget http://lambda.uta.edu/cse6331/project1.tgz
+</pre>
+Untar it:
+<pre>
+tar xfz project1.tgz
+rm project1.tgz
+chmod -R g-wrx,o-wrx project1
+</pre>
+Go to <tt>project1/examples</tt> and look at the two Map-Reduce examples <tt>src/main/java/Simple.java</tt>
+and <tt>src/main/java/Join.java</tt>.
+You can compile both Java files using:
+<pre>
+run example.build
+</pre>
+and you can run them in standalone mode using:
+<pre>
+sbatch example.local.run
+</pre>
+The file <tt>example.local.out</tt> will contain the trace log of the Map-Reduce evaluation
+while the files <tt>output-simple/part-r-00000</tt> <tt>output-join/part-r-00000</tt> will contain the results.
+<p>
+You can compile <tt>Graph.java</tt> on Comet using:
+<pre>
+run graph.build
+</pre>
+and you can run Graph.java in standalone mode over a small dataset using:
+<pre>
+sbatch graph.local.run
+</pre>
+The results generated by your program will be in the directory <tt>output</tt>.
+These results should be:
+<pre>
+2 2
+3 2
+4 1
+5 2
+7 1
+</pre>
+You should develop and run your programs in standalone mode until you get the
+correct result. After you make sure that your program
+runs correctly in standalone mode, you run it in distributed mode using:
+<pre>
+sbatch graph.distr.run
+</pre>
+This will process the graph on the large dataset <tt>large-graph.txt</tt> and will write the result in the directory <tt>output-distr</tt>.
+These results should be similar to the results in the file <tt>large-solution.txt</tt>.
+Note that running in distributed mode will use up at least 10 of your SUs.
+So do this a couple of times only, after you make sure that your program works correctly in standalone mode.
+</p>
+<h2>Project Description</h2>
+<p>
+In this project, you are asked to implement a simple graph algorithm that needs two Map-Reduce jobs.
+A directed graph is represented as a text file where each line represents a graph edge. For example,
+<pre>
+20,40
+</pre>
+represents the directed edge from node 20 to node 40.
+First, for each graph node, you compute the number of node neighbors.
+Then, you group the nodes by their number of neighbors and for each
+group you count how many nodes belong to this group.
+That is, the result will have lines such as:
+<pre>
+10 30
+</pre>
+which says that there are 30 nodes that have 10 neighbors.
+To help you, I am giving you the pseudo code. The first Map-Reduce is:
+<pre>
+map ( key, line ):
+  read 2 long integers from the line into the variables key2 and value2
+  emit (key2,value2)
+
+reduce ( key, nodes ):
+  count = 0
+  for n in nodes
+      count++
+  emit(key,count)
+</pre>
+The second Map-Reduce is:
+<pre>
+map ( node, count ):
+  emit(count,1)
+
+reduce ( key, values ):
+  sum = 0
+  for v in values
+      sum += v
+  emit(key,sum)
+</pre>
+You should write the two Map-Reduce job in the Java file <tt>src/main/java/Graph.java</tt>.
+An empty <tt>src/main/java/Graph.java</tt> has been provided,
+as well as scripts to build and run this code on Comet.
+<b>You should modify the Graph.java only</b>.
+In your Java main program, args[0] is the graph file and args[1] is the output directory.
+The input file format for reading the input graph and the output format for the final result must be text formats,
+while the format for the intermediate results between the Map-Reduce jobs must be binary formats.
+</p>
+<h2>Optional: Use an IDE to develop your project</h2>
+<p>
+If you have a prior good experience with an IDE (IntelliJ IDEA or Eclipse), you may want to develop your program using an IDE and then test it and run it on Comet.
+Using an IDE is optional; you shouldn't do this if you haven't used an IDE before.
+</p>
+<p>
+On IntelliJ IDEA, go to New&rarr;Project from Existing Sources, then choose your project1
+directory, select Maven, and then Finish.
+To compile the project, go to Run&rarr;Edit Configurations, use + to Add New Configuration, select Maven, give it a name, use Working directory: your project1 directory, Command line: install, then Apply.
+</p>
+<p>
+On Eclipse, you first need to install <a href="https://projects.eclipse.org/projects/technology.m2e">m2e</a> (Maven on Eclipse), if it's not already installed.
+Then go to Open File...&rarr;Import Project from File System, then choose your project1
+directory. To compile your project, right click on the project name at the Package Explorer,
+select Run As, and then Maven install.
+</p>
+<h2>Documentation</h2>
+<ul>
+<li> The <a href="https://hadoop.apache.org/docs/r2.6.0/api/index.html" target="_top">The Map-Reduce API</a>. The API has two variations for most classes: <tt>org.apache.hadoop.mapreduce</tt> and <tt>org.apache.hadoop.mapred</tt>.
+<b>You should only use the classes in the package <tt>org.apache.hadoop.mapreduce</tt></b>
+<li> The <a href="https://hadoop.apache.org/docs/r2.6.0/api/index.html?org/apache/hadoop/mapreduce/package-summary.html" target="_top">org.apache.hadoop.mapreduce package</a>
+<li> The <a href="https://hadoop.apache.org/docs/r2.6.0/api/org/apache/hadoop/mapreduce/Job.html" target="_top">Job class</a>
+</ul>
+</p>
+<h2>What to Submit</h2>
+<p>
+You need to submit the following files only:
+<pre>
+project1/src/main/java/Graph.java
+project1/graph.local.out
+project1/output-distr/part-r-00000
+project1/graph.distr.out
+</pre>

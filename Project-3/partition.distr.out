@@ -1,0 +1,1275 @@
+myHadoop: Setting MH_IPOIB_TRANSFORM='s/\([^.]*\).*$/\1.ibnet/' from myhadoop.conf
+myHadoop: Setting MH_SCRATCH_DIR=/scratch/$USER/$SLURM_JOBID from myhadoop.conf
+myHadoop: Using HADOOP_HOME=/opt/hadoop/2.6.0
+myHadoop: Using MH_SCRATCH_DIR=/scratch/rxp9170/36567717
+myHadoop: Using JAVA_HOME=/lib/jvm/java
+myHadoop: Generating Hadoop configuration in directory in /home/rxp9170/cometcluster...
+myHadoop: Backing up old config dir to /home/rxp9170/cometcluster.6...
+‘/home/rxp9170/cometcluster’ -> ‘/home/rxp9170/cometcluster.6’
+myHadoop: Designating comet-14-06.ibnet as master node (namenode, secondary namenode, and jobtracker)
+myHadoop: The following nodes will be slaves (datanode, tasktracer):
+comet-14-06.ibnet
+comet-14-07.ibnet
+20/10/21 13:22:25 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = comet-14-06.sdsc.edu/198.202.114.232
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 2.6.0
+STARTUP_MSG:   classpath = /home/rxp9170/cometcluster:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpclient-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-digester-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/mockito-all-1.8.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-auth-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-recipes-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-math3-3.1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/gson-2.2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-configuration-1.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-compiler-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpcore-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-api-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-net-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-framework-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jets3t-0.9.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsch-0.1.42.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jline-0.9.94.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-client-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-api-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-registry-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-tests-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar:/opt/hadoop/2.6.0/contrib/capacity-scheduler/*.jar
+STARTUP_MSG:   build = https://git-wip-us.apache.org/repos/asf/hadoop.git -r e3496499ecb8d220fba99dc5ed4c99c8f9e33bb1; compiled by 'jenkins' on 2014-11-13T21:10Z
+STARTUP_MSG:   java = 1.8.0_212
+************************************************************/
+20/10/21 13:22:25 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+20/10/21 13:22:25 INFO namenode.NameNode: createNameNode [-format]
+20/10/21 13:22:26 WARN common.Util: Path /scratch/rxp9170/36567717/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+20/10/21 13:22:26 WARN common.Util: Path /scratch/rxp9170/36567717/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+Formatting using clusterid: CID-96b6d0e4-30c8-475d-8117-fbb489964e96
+20/10/21 13:22:26 INFO namenode.FSNamesystem: No KeyProvider found.
+20/10/21 13:22:26 INFO namenode.FSNamesystem: fsLock is fair:true
+20/10/21 13:22:26 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
+20/10/21 13:22:26 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: The block deletion will start around 2020 Oct 21 13:22:26
+20/10/21 13:22:26 INFO util.GSet: Computing capacity for map BlocksMap
+20/10/21 13:22:26 INFO util.GSet: VM type       = 64-bit
+20/10/21 13:22:26 INFO util.GSet: 2.0% max memory 966.7 MB = 19.3 MB
+20/10/21 13:22:26 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: defaultReplication         = 3
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: maxReplication             = 512
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: minReplication             = 1
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+20/10/21 13:22:26 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+20/10/21 13:22:26 INFO namenode.FSNamesystem: fsOwner             = rxp9170 (auth:SIMPLE)
+20/10/21 13:22:26 INFO namenode.FSNamesystem: supergroup          = supergroup
+20/10/21 13:22:26 INFO namenode.FSNamesystem: isPermissionEnabled = true
+20/10/21 13:22:26 INFO namenode.FSNamesystem: HA Enabled: false
+20/10/21 13:22:26 INFO namenode.FSNamesystem: Append Enabled: true
+20/10/21 13:22:26 INFO util.GSet: Computing capacity for map INodeMap
+20/10/21 13:22:26 INFO util.GSet: VM type       = 64-bit
+20/10/21 13:22:26 INFO util.GSet: 1.0% max memory 966.7 MB = 9.7 MB
+20/10/21 13:22:26 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+20/10/21 13:22:26 INFO namenode.NameNode: Caching file names occuring more than 10 times
+20/10/21 13:22:26 INFO util.GSet: Computing capacity for map cachedBlocks
+20/10/21 13:22:26 INFO util.GSet: VM type       = 64-bit
+20/10/21 13:22:26 INFO util.GSet: 0.25% max memory 966.7 MB = 2.4 MB
+20/10/21 13:22:26 INFO util.GSet: capacity      = 2^18 = 262144 entries
+20/10/21 13:22:26 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+20/10/21 13:22:26 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
+20/10/21 13:22:26 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
+20/10/21 13:22:26 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+20/10/21 13:22:26 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+20/10/21 13:22:26 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+20/10/21 13:22:26 INFO util.GSet: VM type       = 64-bit
+20/10/21 13:22:26 INFO util.GSet: 0.029999999329447746% max memory 966.7 MB = 297.0 KB
+20/10/21 13:22:26 INFO util.GSet: capacity      = 2^15 = 32768 entries
+20/10/21 13:22:26 INFO namenode.NNConf: ACLs enabled? false
+20/10/21 13:22:26 INFO namenode.NNConf: XAttrs enabled? true
+20/10/21 13:22:26 INFO namenode.NNConf: Maximum size of an xattr: 16384
+20/10/21 13:22:26 INFO namenode.FSImage: Allocated new BlockPoolId: BP-213036666-198.202.114.232-1603311746571
+20/10/21 13:22:26 INFO common.Storage: Storage directory /scratch/rxp9170/36567717/namenode_data has been successfully formatted.
+20/10/21 13:22:26 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+20/10/21 13:22:26 INFO util.ExitUtil: Exiting with status 0
+20/10/21 13:22:26 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at comet-14-06.sdsc.edu/198.202.114.232
+************************************************************/
+Starting namenodes on [comet-14-06.ibnet]
+comet-14-06.ibnet: starting namenode, logging to /scratch/rxp9170/36567717/logs/hadoop-rxp9170-namenode-comet-14-06.sdsc.edu.out
+comet-14-06.ibnet: starting datanode, logging to /scratch/rxp9170/36567717/logs/hadoop-rxp9170-datanode-comet-14-06.sdsc.edu.out
+comet-14-07.ibnet: starting datanode, logging to /scratch/rxp9170/36567717/logs/hadoop-rxp9170-datanode-comet-14-07.sdsc.edu.out
+Starting secondary namenodes [comet-14-06.ibnet]
+comet-14-06.ibnet: starting secondarynamenode, logging to /scratch/rxp9170/36567717/logs/hadoop-rxp9170-secondarynamenode-comet-14-06.sdsc.edu.out
+starting yarn daemons
+starting resourcemanager, logging to /scratch/rxp9170/36567717/logs/yarn-rxp9170-resourcemanager-comet-14-06.out
+comet-14-06.ibnet: starting nodemanager, logging to /scratch/rxp9170/36567717/logs/yarn-rxp9170-nodemanager-comet-14-06.sdsc.edu.out
+comet-14-07.ibnet: starting nodemanager, logging to /scratch/rxp9170/36567717/logs/yarn-rxp9170-nodemanager-comet-14-07.sdsc.edu.out
+20/10/21 13:22:57 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:22:58 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:22:58 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:22:58 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:22:58 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0001
+20/10/21 13:22:59 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0001
+20/10/21 13:22:59 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0001/
+20/10/21 13:22:59 INFO mapreduce.Job: Running job: job_1603311769052_0001
+20/10/21 13:23:04 INFO mapreduce.Job: Job job_1603311769052_0001 running in uber mode : false
+20/10/21 13:23:04 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:23:11 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:23:16 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:23:17 INFO mapreduce.Job: Job job_1603311769052_0001 completed successfully
+20/10/21 13:23:17 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=13251432
+		FILE: Number of bytes written=26714365
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=7660495
+		HDFS: Number of bytes written=13940391
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=4889
+		Total time spent by all reduces in occupied slots (ms)=2909
+		Total time spent by all map tasks (ms)=4889
+		Total time spent by all reduce tasks (ms)=2909
+		Total vcore-seconds taken by all map tasks=4889
+		Total vcore-seconds taken by all reduce tasks=2909
+		Total megabyte-seconds taken by all map tasks=5006336
+		Total megabyte-seconds taken by all reduce tasks=2978816
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=100000
+		Map output bytes=13007104
+		Map output materialized bytes=13251432
+		Input split bytes=124
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100000
+		Reduce shuffle bytes=13251432
+		Reduce input records=100000
+		Reduce output records=100000
+		Spilled Records=200000
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=163
+		CPU time spent (ms)=7850
+		Physical memory (bytes) snapshot=470568960
+		Virtual memory (bytes) snapshot=4423303168
+		Total committed heap usage (bytes)=353370112
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7660371
+	File Output Format Counters 
+		Bytes Written=13940391
+20/10/21 13:23:17 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:23:17 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:23:17 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:23:17 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:23:17 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0002
+20/10/21 13:23:17 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0002
+20/10/21 13:23:17 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0002/
+20/10/21 13:23:17 INFO mapreduce.Job: Running job: job_1603311769052_0002
+20/10/21 13:23:21 INFO mapreduce.Job: Job job_1603311769052_0002 running in uber mode : false
+20/10/21 13:23:21 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:23:26 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:23:31 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:23:31 INFO mapreduce.Job: Job job_1603311769052_0002 completed successfully
+20/10/21 13:23:31 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=13255932
+		FILE: Number of bytes written=26723731
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13940528
+		HDFS: Number of bytes written=13940391
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2556
+		Total time spent by all reduces in occupied slots (ms)=2326
+		Total time spent by all map tasks (ms)=2556
+		Total time spent by all reduce tasks (ms)=2326
+		Total vcore-seconds taken by all map tasks=2556
+		Total vcore-seconds taken by all reduce tasks=2326
+		Total megabyte-seconds taken by all map tasks=2617344
+		Total megabyte-seconds taken by all reduce tasks=2381824
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=100125
+		Map output bytes=13011354
+		Map output materialized bytes=13255932
+		Input split bytes=137
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100000
+		Reduce shuffle bytes=13255932
+		Reduce input records=100125
+		Reduce output records=100000
+		Spilled Records=200250
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=108
+		CPU time spent (ms)=6510
+		Physical memory (bytes) snapshot=597053440
+		Virtual memory (bytes) snapshot=4466282496
+		Total committed heap usage (bytes)=346030080
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13940391
+	File Output Format Counters 
+		Bytes Written=13940391
+20/10/21 13:23:32 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:23:32 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:23:32 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:23:32 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:23:32 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0003
+20/10/21 13:23:32 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0003
+20/10/21 13:23:32 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0003/
+20/10/21 13:23:32 INFO mapreduce.Job: Running job: job_1603311769052_0003
+20/10/21 13:23:36 INFO mapreduce.Job: Job job_1603311769052_0003 running in uber mode : false
+20/10/21 13:23:36 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:23:41 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:23:45 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:23:46 INFO mapreduce.Job: Job job_1603311769052_0003 completed successfully
+20/10/21 13:23:46 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=13312812
+		FILE: Number of bytes written=26837491
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13940528
+		HDFS: Number of bytes written=13940391
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2745
+		Total time spent by all reduces in occupied slots (ms)=2341
+		Total time spent by all map tasks (ms)=2745
+		Total time spent by all reduce tasks (ms)=2341
+		Total vcore-seconds taken by all map tasks=2745
+		Total vcore-seconds taken by all reduce tasks=2341
+		Total megabyte-seconds taken by all map tasks=2810880
+		Total megabyte-seconds taken by all reduce tasks=2397184
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=101705
+		Map output bytes=13065074
+		Map output materialized bytes=13312812
+		Input split bytes=137
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100000
+		Reduce shuffle bytes=13312812
+		Reduce input records=101705
+		Reduce output records=100000
+		Spilled Records=203410
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=93
+		CPU time spent (ms)=6650
+		Physical memory (bytes) snapshot=588754944
+		Virtual memory (bytes) snapshot=4501839872
+		Total committed heap usage (bytes)=336068608
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13940391
+	File Output Format Counters 
+		Bytes Written=13940391
+20/10/21 13:23:46 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:23:46 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:23:46 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:23:46 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:23:46 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0004
+20/10/21 13:23:46 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0004
+20/10/21 13:23:46 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0004/
+20/10/21 13:23:46 INFO mapreduce.Job: Running job: job_1603311769052_0004
+20/10/21 13:23:50 INFO mapreduce.Job: Job job_1603311769052_0004 running in uber mode : false
+20/10/21 13:23:50 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:23:55 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:23:59 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:23:59 INFO mapreduce.Job: Job job_1603311769052_0004 completed successfully
+20/10/21 13:23:59 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=13992384
+		FILE: Number of bytes written=28196635
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13940528
+		HDFS: Number of bytes written=13940391
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2392
+		Total time spent by all reduces in occupied slots (ms)=2257
+		Total time spent by all map tasks (ms)=2392
+		Total time spent by all reduce tasks (ms)=2257
+		Total vcore-seconds taken by all map tasks=2392
+		Total vcore-seconds taken by all reduce tasks=2257
+		Total megabyte-seconds taken by all map tasks=2449408
+		Total megabyte-seconds taken by all reduce tasks=2311168
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=120582
+		Map output bytes=13706892
+		Map output materialized bytes=13992384
+		Input split bytes=137
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100000
+		Reduce shuffle bytes=13992384
+		Reduce input records=120582
+		Reduce output records=100000
+		Spilled Records=241164
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=87
+		CPU time spent (ms)=6100
+		Physical memory (bytes) snapshot=592883712
+		Virtual memory (bytes) snapshot=4468338688
+		Total committed heap usage (bytes)=342884352
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13940391
+	File Output Format Counters 
+		Bytes Written=13940391
+20/10/21 13:23:59 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:23:59 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:23:59 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:23:59 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:24:00 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0005
+20/10/21 13:24:00 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0005
+20/10/21 13:24:00 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0005/
+20/10/21 13:24:00 INFO mapreduce.Job: Running job: job_1603311769052_0005
+20/10/21 13:24:04 INFO mapreduce.Job: Job job_1603311769052_0005 running in uber mode : false
+20/10/21 13:24:04 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:24:09 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:24:14 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:24:14 INFO mapreduce.Job: Job job_1603311769052_0005 completed successfully
+20/10/21 13:24:14 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=21364176
+		FILE: Number of bytes written=42940219
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13940528
+		HDFS: Number of bytes written=13940391
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2714
+		Total time spent by all reduces in occupied slots (ms)=2560
+		Total time spent by all map tasks (ms)=2714
+		Total time spent by all reduce tasks (ms)=2560
+		Total vcore-seconds taken by all map tasks=2714
+		Total vcore-seconds taken by all reduce tasks=2560
+		Total megabyte-seconds taken by all map tasks=2779136
+		Total megabyte-seconds taken by all reduce tasks=2621440
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=325354
+		Map output bytes=20669140
+		Map output materialized bytes=21364176
+		Input split bytes=137
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100000
+		Reduce shuffle bytes=21364176
+		Reduce input records=325354
+		Reduce output records=100000
+		Spilled Records=650708
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=87
+		CPU time spent (ms)=6870
+		Physical memory (bytes) snapshot=577413120
+		Virtual memory (bytes) snapshot=4451876864
+		Total committed heap usage (bytes)=339738624
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13940391
+	File Output Format Counters 
+		Bytes Written=13940391
+20/10/21 13:24:14 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:24:14 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:24:14 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:24:14 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:24:14 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0006
+20/10/21 13:24:14 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0006
+20/10/21 13:24:14 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0006/
+20/10/21 13:24:14 INFO mapreduce.Job: Running job: job_1603311769052_0006
+20/10/21 13:24:18 INFO mapreduce.Job: Job job_1603311769052_0006 running in uber mode : false
+20/10/21 13:24:18 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:24:24 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:24:30 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:24:30 INFO mapreduce.Job: Job job_1603311769052_0006 completed successfully
+20/10/21 13:24:30 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=52120920
+		FILE: Number of bytes written=104860911
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13940528
+		HDFS: Number of bytes written=13940391
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=4176
+		Total time spent by all reduces in occupied slots (ms)=3142
+		Total time spent by all map tasks (ms)=4176
+		Total time spent by all reduce tasks (ms)=3142
+		Total vcore-seconds taken by all map tasks=4176
+		Total vcore-seconds taken by all reduce tasks=3142
+		Total megabyte-seconds taken by all map tasks=4276224
+		Total megabyte-seconds taken by all reduce tasks=3217408
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=1179708
+		Map output bytes=49717176
+		Map output materialized bytes=52120920
+		Input split bytes=137
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100000
+		Reduce shuffle bytes=52120920
+		Reduce input records=1179708
+		Reduce output records=100000
+		Spilled Records=2359416
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=113
+		CPU time spent (ms)=7490
+		Physical memory (bytes) snapshot=520818688
+		Virtual memory (bytes) snapshot=4442537984
+		Total committed heap usage (bytes)=338165760
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13940391
+	File Output Format Counters 
+		Bytes Written=13940391
+20/10/21 13:24:30 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:24:30 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:24:30 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:24:30 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:24:30 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0007
+20/10/21 13:24:30 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0007
+20/10/21 13:24:30 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0007/
+20/10/21 13:24:30 INFO mapreduce.Job: Running job: job_1603311769052_0007
+20/10/21 13:24:34 INFO mapreduce.Job: Job job_1603311769052_0007 running in uber mode : false
+20/10/21 13:24:34 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:24:41 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:24:46 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:24:46 INFO mapreduce.Job: Job job_1603311769052_0007 completed successfully
+20/10/21 13:24:46 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=56482788
+		FILE: Number of bytes written=113618723
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13940528
+		HDFS: Number of bytes written=13940391
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=4483
+		Total time spent by all reduces in occupied slots (ms)=3116
+		Total time spent by all map tasks (ms)=4483
+		Total time spent by all reduce tasks (ms)=3116
+		Total vcore-seconds taken by all map tasks=4483
+		Total vcore-seconds taken by all reduce tasks=3116
+		Total megabyte-seconds taken by all map tasks=4590592
+		Total megabyte-seconds taken by all reduce tasks=3190784
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=1300871
+		Map output bytes=53836718
+		Map output materialized bytes=56482788
+		Input split bytes=137
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100000
+		Reduce shuffle bytes=56482788
+		Reduce input records=1300871
+		Reduce output records=100000
+		Spilled Records=2601742
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=125
+		CPU time spent (ms)=9000
+		Physical memory (bytes) snapshot=544190464
+		Virtual memory (bytes) snapshot=4438310912
+		Total committed heap usage (bytes)=341835776
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13940391
+	File Output Format Counters 
+		Bytes Written=13940391
+20/10/21 13:24:47 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:24:47 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:24:47 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:24:47 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:24:47 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0008
+20/10/21 13:24:47 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0008
+20/10/21 13:24:47 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0008/
+20/10/21 13:24:47 INFO mapreduce.Job: Running job: job_1603311769052_0008
+20/10/21 13:24:51 INFO mapreduce.Job: Job job_1603311769052_0008 running in uber mode : false
+20/10/21 13:24:51 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:24:57 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:25:03 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:25:03 INFO mapreduce.Job: Job job_1603311769052_0008 completed successfully
+20/10/21 13:25:03 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=56483400
+		FILE: Number of bytes written=113619955
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13940528
+		HDFS: Number of bytes written=13940391
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=4405
+		Total time spent by all reduces in occupied slots (ms)=3221
+		Total time spent by all map tasks (ms)=4405
+		Total time spent by all reduce tasks (ms)=3221
+		Total vcore-seconds taken by all map tasks=4405
+		Total vcore-seconds taken by all reduce tasks=3221
+		Total megabyte-seconds taken by all map tasks=4510720
+		Total megabyte-seconds taken by all reduce tasks=3298304
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=1300888
+		Map output bytes=53837296
+		Map output materialized bytes=56483400
+		Input split bytes=137
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100000
+		Reduce shuffle bytes=56483400
+		Reduce input records=1300888
+		Reduce output records=100000
+		Spilled Records=2601776
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=120
+		CPU time spent (ms)=8970
+		Physical memory (bytes) snapshot=552652800
+		Virtual memory (bytes) snapshot=4444770304
+		Total committed heap usage (bytes)=338690048
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13940391
+	File Output Format Counters 
+		Bytes Written=13940391
+20/10/21 13:25:03 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:25:03 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:25:03 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:25:03 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:25:03 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0009
+20/10/21 13:25:03 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0009
+20/10/21 13:25:03 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0009/
+20/10/21 13:25:03 INFO mapreduce.Job: Running job: job_1603311769052_0009
+20/10/21 13:25:07 INFO mapreduce.Job: Job job_1603311769052_0009 running in uber mode : false
+20/10/21 13:25:07 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:25:14 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:25:19 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:25:19 INFO mapreduce.Job: Job job_1603311769052_0009 completed successfully
+20/10/21 13:25:19 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=56483400
+		FILE: Number of bytes written=113619955
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13940528
+		HDFS: Number of bytes written=13940391
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=4428
+		Total time spent by all reduces in occupied slots (ms)=3109
+		Total time spent by all map tasks (ms)=4428
+		Total time spent by all reduce tasks (ms)=3109
+		Total vcore-seconds taken by all map tasks=4428
+		Total vcore-seconds taken by all reduce tasks=3109
+		Total megabyte-seconds taken by all map tasks=4534272
+		Total megabyte-seconds taken by all reduce tasks=3183616
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=1300888
+		Map output bytes=53837296
+		Map output materialized bytes=56483400
+		Input split bytes=137
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=100000
+		Reduce shuffle bytes=56483400
+		Reduce input records=1300888
+		Reduce output records=100000
+		Spilled Records=2601776
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=108
+		CPU time spent (ms)=7830
+		Physical memory (bytes) snapshot=521138176
+		Virtual memory (bytes) snapshot=4435398656
+		Total committed heap usage (bytes)=332922880
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13940391
+	File Output Format Counters 
+		Bytes Written=13940391
+20/10/21 13:25:19 INFO client.RMProxy: Connecting to ResourceManager at comet-14-06.ibnet/10.22.252.153:8032
+20/10/21 13:25:19 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/10/21 13:25:19 INFO input.FileInputFormat: Total input paths to process : 1
+20/10/21 13:25:19 INFO mapreduce.JobSubmitter: number of splits:1
+20/10/21 13:25:19 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603311769052_0010
+20/10/21 13:25:19 INFO impl.YarnClientImpl: Submitted application application_1603311769052_0010
+20/10/21 13:25:19 INFO mapreduce.Job: The url to track the job: http://comet-14-06.ibnet:8088/proxy/application_1603311769052_0010/
+20/10/21 13:25:19 INFO mapreduce.Job: Running job: job_1603311769052_0010
+20/10/21 13:25:23 INFO mapreduce.Job: Job job_1603311769052_0010 running in uber mode : false
+20/10/21 13:25:23 INFO mapreduce.Job:  map 0% reduce 0%
+20/10/21 13:25:27 INFO mapreduce.Job:  map 100% reduce 0%
+20/10/21 13:25:32 INFO mapreduce.Job:  map 100% reduce 100%
+20/10/21 13:25:32 INFO mapreduce.Job: Job job_1603311769052_0010 completed successfully
+20/10/21 13:25:32 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=1800006
+		FILE: Number of bytes written=3811961
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=13940528
+		HDFS: Number of bytes written=114
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2039
+		Total time spent by all reduces in occupied slots (ms)=1864
+		Total time spent by all map tasks (ms)=2039
+		Total time spent by all reduce tasks (ms)=1864
+		Total vcore-seconds taken by all map tasks=2039
+		Total vcore-seconds taken by all reduce tasks=1864
+		Total megabyte-seconds taken by all map tasks=2087936
+		Total megabyte-seconds taken by all reduce tasks=1908736
+	Map-Reduce Framework
+		Map input records=100000
+		Map output records=100000
+		Map output bytes=1600000
+		Map output materialized bytes=1800006
+		Input split bytes=137
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=1800006
+		Reduce input records=100000
+		Reduce output records=10
+		Spilled Records=200000
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=91
+		CPU time spent (ms)=4040
+		Physical memory (bytes) snapshot=547282944
+		Virtual memory (bytes) snapshot=4464508928
+		Total committed heap usage (bytes)=340787200
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=13940391
+	File Output Format Counters 
+		Bytes Written=114
+stopping yarn daemons
+stopping resourcemanager
+comet-14-06.ibnet: stopping nodemanager
+comet-14-06.ibnet: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+comet-14-07.ibnet: stopping nodemanager
+comet-14-07.ibnet: nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+no proxyserver to stop
+Stopping namenodes on [comet-14-06.ibnet]
+comet-14-06.ibnet: stopping namenode
+comet-14-06.ibnet: stopping datanode
+comet-14-07.ibnet: stopping datanode
+Stopping secondary namenodes [comet-14-06.ibnet]
+comet-14-06.ibnet: stopping secondarynamenode
+Copying Hadoop logs back to /home/rxp9170/cometcluster/logs...
+‘/scratch/rxp9170/36567717/logs’ -> ‘/home/rxp9170/cometcluster/logs’
+‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-resourcemanager-comet-14-06.out’ -> ‘/home/rxp9170/cometcluster/logs/yarn-rxp9170-resourcemanager-comet-14-06.out’
+‘/scratch/rxp9170/36567717/logs/SecurityAuth-rxp9170.audit’ -> ‘/home/rxp9170/cometcluster/logs/SecurityAuth-rxp9170.audit’
+‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-datanode-comet-14-06.sdsc.edu.out’ -> ‘/home/rxp9170/cometcluster/logs/hadoop-rxp9170-datanode-comet-14-06.sdsc.edu.out’
+‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-nodemanager-comet-14-06.sdsc.edu.log’ -> ‘/home/rxp9170/cometcluster/logs/yarn-rxp9170-nodemanager-comet-14-06.sdsc.edu.log’
+‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-secondarynamenode-comet-14-06.sdsc.edu.log’ -> ‘/home/rxp9170/cometcluster/logs/hadoop-rxp9170-secondarynamenode-comet-14-06.sdsc.edu.log’
+‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-namenode-comet-14-06.sdsc.edu.out’ -> ‘/home/rxp9170/cometcluster/logs/hadoop-rxp9170-namenode-comet-14-06.sdsc.edu.out’
+‘/scratch/rxp9170/36567717/logs/userlogs’ -> ‘/home/rxp9170/cometcluster/logs/userlogs’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0001’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0005’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0002’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0003’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003/syslog’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0004’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002/stderr’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002/stderr’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002/stdout’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002/stdout’
+‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002/syslog’ -> ‘/home/rxp9170/cometcluster/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002/syslog’
+‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-secondarynamenode-comet-14-06.sdsc.edu.out’ -> ‘/home/rxp9170/cometcluster/logs/hadoop-rxp9170-secondarynamenode-comet-14-06.sdsc.edu.out’
+‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-namenode-comet-14-06.sdsc.edu.log’ -> ‘/home/rxp9170/cometcluster/logs/hadoop-rxp9170-namenode-comet-14-06.sdsc.edu.log’
+‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-nodemanager-comet-14-06.sdsc.edu.out’ -> ‘/home/rxp9170/cometcluster/logs/yarn-rxp9170-nodemanager-comet-14-06.sdsc.edu.out’
+‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-datanode-comet-14-06.sdsc.edu.log’ -> ‘/home/rxp9170/cometcluster/logs/hadoop-rxp9170-datanode-comet-14-06.sdsc.edu.log’
+‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-resourcemanager-comet-14-06.log’ -> ‘/home/rxp9170/cometcluster/logs/yarn-rxp9170-resourcemanager-comet-14-06.log’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/nmPrivate’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/usercache/rxp9170/filecache’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/usercache/rxp9170/appcache’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/usercache/rxp9170’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/usercache’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/filecache’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch’
+removed ‘/scratch/rxp9170/36567717/tmp/dfs/namesecondary/current/fsimage_0000000000000000222’
+removed ‘/scratch/rxp9170/36567717/tmp/dfs/namesecondary/current/fsimage_0000000000000000000’
+removed ‘/scratch/rxp9170/36567717/tmp/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000222’
+removed ‘/scratch/rxp9170/36567717/tmp/dfs/namesecondary/current/fsimage_0000000000000000000.md5’
+removed ‘/scratch/rxp9170/36567717/tmp/dfs/namesecondary/current/VERSION’
+removed ‘/scratch/rxp9170/36567717/tmp/dfs/namesecondary/current/fsimage_0000000000000000222.md5’
+removed directory: ‘/scratch/rxp9170/36567717/tmp/dfs/namesecondary/current’
+removed directory: ‘/scratch/rxp9170/36567717/tmp/dfs/namesecondary’
+removed directory: ‘/scratch/rxp9170/36567717/tmp/dfs’
+removed directory: ‘/scratch/rxp9170/36567717/tmp’
+removed ‘/scratch/rxp9170/36567717/namenode_data/current/fsimage_0000000000000000000.md5’
+removed ‘/scratch/rxp9170/36567717/namenode_data/current/seen_txid’
+removed ‘/scratch/rxp9170/36567717/namenode_data/current/fsimage_0000000000000000222.md5’
+removed ‘/scratch/rxp9170/36567717/namenode_data/current/fsimage_0000000000000000222’
+removed ‘/scratch/rxp9170/36567717/namenode_data/current/fsimage_0000000000000000000’
+removed ‘/scratch/rxp9170/36567717/namenode_data/current/VERSION’
+removed ‘/scratch/rxp9170/36567717/namenode_data/current/edits_0000000000000000001-0000000000000000222’
+removed ‘/scratch/rxp9170/36567717/namenode_data/current/edits_inprogress_0000000000000000223’
+removed directory: ‘/scratch/rxp9170/36567717/namenode_data/current’
+removed directory: ‘/scratch/rxp9170/36567717/namenode_data’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/dncp_block_verification.log.curr’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/tmp’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741905_1081.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741865’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741865_1041.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741915’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741852_1028.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741925_1101.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741844’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741833’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741892’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741902_1078.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741922_1098.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741895’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741834’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741843’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741854_1030.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741885_1061.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741862’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741912’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741882_1058.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741924’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741854’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741855_1031.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741884_1060.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741882’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741883_1059.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741875’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741905’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741872’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741864_1040.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741902’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741904_1080.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741885’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741903_1079.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741923_1099.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741853_1029.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741923’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741853’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741924_1100.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741913’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741863’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741832_1008.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741894_1070.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741845_1021.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741894’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741872_1048.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741862_1038.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741842_1018.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741842’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741835’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741912_1088.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741832’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741914_1090.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741845’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741874_1050.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741893’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741892_1068.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741834_1010.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741914’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741864’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741875_1051.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741884’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741825’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741852’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741915_1091.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741922’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741903’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741873’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741893_1069.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741835_1011.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741833_1009.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741895_1071.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741844_1020.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741904’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741874’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741843_1019.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741855’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741925’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741913_1089.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741883’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741873_1049.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741863_1039.meta’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/rbw’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/dfsUsed’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/VERSION’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/dncp_block_verification.log.prev’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/VERSION’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data’
+removed directory: ‘/scratch/rxp9170/36567717/pids’
+removed ‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-resourcemanager-comet-14-06.out’
+removed ‘/scratch/rxp9170/36567717/logs/SecurityAuth-rxp9170.audit’
+removed ‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-datanode-comet-14-06.sdsc.edu.out’
+removed ‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-nodemanager-comet-14-06.sdsc.edu.log’
+removed ‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-secondarynamenode-comet-14-06.sdsc.edu.log’
+removed ‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-namenode-comet-14-06.sdsc.edu.out’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003/stdout’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000003’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002/syslog’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000002’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001/syslog’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006/container_1603311769052_0006_01_000001’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0006’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000001’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000002’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003/stdout’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000003’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000003’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002/stdout’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000002’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008/container_1603311769052_0008_01_000001’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0008’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002/stdout’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000002’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001/stdout’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000001’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000003’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000001’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000002’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000001’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010/container_1603311769052_0010_01_000003’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0010’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002/syslog’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000002’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs’
+removed ‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-secondarynamenode-comet-14-06.sdsc.edu.out’
+removed ‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-namenode-comet-14-06.sdsc.edu.log’
+removed ‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-nodemanager-comet-14-06.sdsc.edu.out’
+removed ‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-datanode-comet-14-06.sdsc.edu.log’
+removed ‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-resourcemanager-comet-14-06.log’
+removed directory: ‘/scratch/rxp9170/36567717/logs’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/filecache’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/nmPrivate’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/usercache/rxp9170/filecache’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/usercache/rxp9170/appcache’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/usercache/rxp9170’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch/usercache’
+removed directory: ‘/scratch/rxp9170/36567717/mapred_scratch’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/dncp_block_verification.log.prev’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/tmp’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/dncp_block_verification.log.curr’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741855_1031.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741884_1060.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741885’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741853’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741923’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741902’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741883_1059.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741872’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741864_1040.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741905’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741875’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741904_1080.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741854’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741924’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741903_1079.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741923_1099.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741853_1029.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741882’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741924_1100.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741912’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741862’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741905_1081.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741865_1041.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741852_1028.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741895’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741925_1101.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741843’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741834’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741902_1078.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741922_1098.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741833’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741844’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741854_1030.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741885_1061.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741892’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741915’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741882_1058.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741865’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741925’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741875_1051.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741855’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741883’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741915_1091.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741874’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741904’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741893_1069.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741835_1011.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741833_1009.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741895_1071.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741844_1020.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741873’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741903’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741843_1019.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741913_1089.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741884’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741922’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741852’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741825’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741863_1039.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741873_1049.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741832_1008.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741894_1070.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741845_1021.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741864’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741914’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741845’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741832’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741862_1038.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741872_1048.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741842_1018.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741912_1088.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741893’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741894’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741914_1090.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741874_1050.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741835’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741842’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741863’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741913’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741892_1068.meta’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0/blk_1073741834_1010.meta’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0/subdir0’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized/subdir0’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/finalized’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/rbw’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/VERSION’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current/dfsUsed’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571/current’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current/BP-213036666-198.202.114.232-1603311746571’
+removed ‘/scratch/rxp9170/36567717/hdfs_data/current/VERSION’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data/current’
+removed directory: ‘/scratch/rxp9170/36567717/hdfs_data’
+removed directory: ‘/scratch/rxp9170/36567717/pids’
+removed ‘/scratch/rxp9170/36567717/logs/SecurityAuth-rxp9170.audit’
+removed ‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-nodemanager-comet-14-07.sdsc.edu.out’
+removed ‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-datanode-comet-14-07.sdsc.edu.log’
+removed ‘/scratch/rxp9170/36567717/logs/hadoop-rxp9170-datanode-comet-14-07.sdsc.edu.out’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000003/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000003/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000003/stdout’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001/container_1603311769052_0001_01_000003’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0001’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000002/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000002/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000002/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000002’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000001/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000001/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000001/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005/container_1603311769052_0005_01_000001’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0005’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000003/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000003/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000003/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002/container_1603311769052_0002_01_000003’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0002’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000001/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000001/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000001/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000001’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000002/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000002/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000002/stdout’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000002’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000003/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000003/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000003/syslog’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007/container_1603311769052_0007_01_000003’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0007’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000003/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000003/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000003/stdout’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000003’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000001/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000001/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000001/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000001’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000002/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000002/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000002/syslog’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009/container_1603311769052_0009_01_000002’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0009’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000002/stderr’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000002/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000002/syslog’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003/container_1603311769052_0003_01_000002’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0003’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000003/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000003/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000003/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000003’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000001/stdout’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000001/syslog’
+removed ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000001/stderr’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004/container_1603311769052_0004_01_000001’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs/application_1603311769052_0004’
+removed directory: ‘/scratch/rxp9170/36567717/logs/userlogs’
+removed ‘/scratch/rxp9170/36567717/logs/yarn-rxp9170-nodemanager-comet-14-07.sdsc.edu.log’
+removed directory: ‘/scratch/rxp9170/36567717/logs’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08/.active’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08/jsp’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50070_hdfs____w2cu08’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_3188388496037079480/.active’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_3188388496037079480/jsp’
+removed directory: ‘/tmp/Jetty_0_0_0_0_50075_datanode____hwtdwq_3188388496037079480’
+removed directory: ‘/tmp/Jetty_comet.14.06_ibnet_50090_secondary____.auof6i/.active’
+removed directory: ‘/tmp/Jetty_comet.14.06_ibnet_50090_secondary____.auof6i/jsp’
+removed directory: ‘/tmp/Jetty_comet.14.06_ibnet_50090_secondary____.auof6i’
